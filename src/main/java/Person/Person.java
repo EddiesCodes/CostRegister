@@ -15,9 +15,9 @@ public class Person {
         this.debts = new Debts();
     }
 
-    public void addNewDebts(Event event, Payer payer, Person person){
-        debts.checkEmpty(event, payer, person);
-        debts.addDebts(event, payer, person);
+    public void addNewDebts(Event event, Payer payer){
+        debts.checkEmpty(event, payer, this);
+        debts.addDebts(event, payer, this);
     }
 
     public void printName(){

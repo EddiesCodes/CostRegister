@@ -49,13 +49,14 @@ public class Main {
         ListEuro rentCost = new ListEuro();
         rentCost.add(1275.80);
 
-        Payer rentPayer = new Payer(null, rentPayerPerson, rentCost, communeMember);
+
+        Payer rentPayer = new Payer("Kein Datum", rentPayerPerson, rentCost, communeMember);
         Event rent = new Event(communeMember, rentPayer);
         commune.addEvent(rent, "Miete");
 
-        thomas.addNewDebts(rent, rentPayer, thomas);
-        markus.addNewDebts(rent, rentPayer, markus);
-        christoph.addNewDebts(rent, rentPayer, christoph);
+        thomas.addNewDebts(rent, rentPayer);
+        markus.addNewDebts(rent, rentPayer);
+        christoph.addNewDebts(rent, rentPayer);
 
 
         //Markus zahlt 29,99 Euro für die Internet Flat
@@ -65,13 +66,13 @@ public class Main {
         ListEuro flatCost = new ListEuro();
         flatCost.add(29.99);
 
-        Payer flatPayer = new Payer(null, flatPayerPerson, flatCost, communeMember);
+        Payer flatPayer = new Payer("Kein Datum", flatPayerPerson, flatCost, communeMember);
         Event flat = new Event(communeMember, flatPayer);
         commune.addEvent(flat, "Internet-Flat");
 
-        thomas.addNewDebts(flat, flatPayer, thomas);
-        markus.addNewDebts(flat, flatPayer, markus);
-        christoph.addNewDebts(flat, flatPayer, christoph);
+        thomas.addNewDebts(flat, flatPayer);
+        markus.addNewDebts(flat, flatPayer);
+        christoph.addNewDebts(flat, flatPayer);
 
 
         //Thomas besorgt Bier für den Monat, er bezahlt 63,80 Euro. Markus trinkt kein Bier
@@ -85,12 +86,12 @@ public class Main {
         ListEuro beerCost = new ListEuro();
         beerCost.add(63.80);
 
-        Payer beerPayer = new Payer(null, beerPayerPerson, beerCost, beerMember);
+        Payer beerPayer = new Payer("Kein Datum", beerPayerPerson, beerCost, beerMember);
         Event beer = new Event(beerMember, beerPayer);
         commune.addEvent(beer, "Bier");
 
-        thomas.addNewDebts(beer, beerPayer, thomas);
-        christoph.addNewDebts(beer, beerPayer, christoph);
+        thomas.addNewDebts(beer, beerPayer);
+        christoph.addNewDebts(beer, beerPayer);
 
 
         //Thomas füllt auch den Kühlschrank für alle, er bezahlt 104,88 Euro.
@@ -100,13 +101,13 @@ public class Main {
         ListEuro fridgeCost = new ListEuro();
         fridgeCost.add(104.88);
 
-        Payer fridgePayer = new Payer(null, fridgePayerPerson, fridgeCost, communeMember);
+        Payer fridgePayer = new Payer("Kein Datum", fridgePayerPerson, fridgeCost, communeMember);
         Event fridge = new Event(communeMember, fridgePayer);
         commune.addEvent(fridge, "Kühlschrank");
 
-        thomas.addNewDebts(fridge, fridgePayer, thomas);
-        christoph.addNewDebts(fridge, fridgePayer, christoph);
-        markus.addNewDebts(fridge, fridgePayer, markus);
+        thomas.addNewDebts(fridge, fridgePayer);
+        christoph.addNewDebts(fridge, fridgePayer);
+        markus.addNewDebts(fridge, fridgePayer);
 
 
         //Jens bezahlt bei der Städtereise am 30.10.2017 den Betrag von 148 Euro für die Stadtrundfahrt, an der alle teilnehmen.
@@ -120,14 +121,14 @@ public class Main {
         Event cityTour = new Event(cityTourMember, cityTourPayer);
         cityTravel.addEvent(cityTour, "Stadtrundfahrt");
 
-        jens.addNewDebts(cityTour, cityTourPayer, jens);
-        thomas.addNewDebts(cityTour, cityTourPayer, thomas);
-        gerd.addNewDebts(cityTour, cityTourPayer, gerd);
-        christoph.addNewDebts(cityTour, cityTourPayer, christoph);
-        sina.addNewDebts(cityTour, cityTourPayer, sina);
-        simon.addNewDebts(cityTour, cityTourPayer, simon);
-        jessica.addNewDebts(cityTour, cityTourPayer, jessica);
-        kathrin.addNewDebts(cityTour, cityTourPayer, kathrin);
+        jens.addNewDebts(cityTour, cityTourPayer);
+        thomas.addNewDebts(cityTour, cityTourPayer);
+        gerd.addNewDebts(cityTour, cityTourPayer);
+        christoph.addNewDebts(cityTour, cityTourPayer);
+        sina.addNewDebts(cityTour, cityTourPayer);
+        simon.addNewDebts(cityTour, cityTourPayer);
+        jessica.addNewDebts(cityTour, cityTourPayer);
+        kathrin.addNewDebts(cityTour, cityTourPayer);
 
 
         //Die Tickets für das Musical kosten 864.50 Euro, Sina bezahlt davon 500 Euro, der Rest wird von Kathrin übernommen.
@@ -147,15 +148,15 @@ public class Main {
         musicalCost.add(500.00);
         musicalCost.add(864.50 - 500.00);
 
-        Payer musicalPayer = new Payer(null, musicalPayerPerson, musicalCost, musicalMember);
+        Payer musicalPayer = new Payer("Kein Datum", musicalPayerPerson, musicalCost, musicalMember);
         Event musical = new Event(musicalMember, musicalPayer);
         cityTravel.addEvent(musical, "Musical");
 
-        sina.addNewDebts(musical, musicalPayer, sina);
-        kathrin.addNewDebts(musical, musicalPayer, kathrin);
-        christoph.addNewDebts(musical, musicalPayer, christoph);
-        jessica.addNewDebts(musical, musicalPayer, jessica);
-        gerd.addNewDebts(musical, musicalPayer, gerd);
+        sina.addNewDebts(musical, musicalPayer);
+        kathrin.addNewDebts(musical, musicalPayer);
+        christoph.addNewDebts(musical, musicalPayer);
+        jessica.addNewDebts(musical, musicalPayer);
+        gerd.addNewDebts(musical, musicalPayer);
 
 
         //Thomas bezahlt 66 Euro für das Bier am Abend, Simon hatte Kopfschmerzen und ist im Hotel geblieben.
@@ -174,17 +175,17 @@ public class Main {
         ListEuro beerEveningCost = new ListEuro();
         beerEveningCost.add(66.00);
 
-        Payer beerEveningPayer = new Payer(null, beerEveningPayerPerson, beerCost, beerMember);
+        Payer beerEveningPayer = new Payer("Kein Datum", beerEveningPayerPerson, beerCost, beerMember);
         Event beerEvening = new Event(beerEveningMember, beerEveningPayer);
         cityTravel.addEvent(beerEvening, "Bier am Abend");
 
-        sina.addNewDebts(beerEvening, beerPayer, sina);
-        jens.addNewDebts(beerEvening, beerPayer, jens);
-        jessica.addNewDebts(beerEvening, beerPayer, jessica);
-        christoph.addNewDebts(beerEvening, beerPayer, christoph);
-        thomas.addNewDebts(beerEvening, beerPayer, thomas);
-        gerd.addNewDebts(beerEvening, beerPayer, gerd);
-        kathrin.addNewDebts(beerEvening, beerPayer, kathrin);
+        sina.addNewDebts(beerEvening, beerPayer);
+        jens.addNewDebts(beerEvening, beerPayer);
+        jessica.addNewDebts(beerEvening, beerPayer);
+        christoph.addNewDebts(beerEvening, beerPayer);
+        thomas.addNewDebts(beerEvening, beerPayer);
+        gerd.addNewDebts(beerEvening, beerPayer);
+        kathrin.addNewDebts(beerEvening, beerPayer);
 
 
         //Gerd hat für Benzin 61,38 Euro ausgegeben, bei ihm sind Jens, Kathrin, Sina und Christoph mitgefahren.
@@ -207,18 +208,18 @@ public class Main {
         fuelCost.add(61.38);
         fuelCost.add(54.43);
 
-        Payer fuelPayer = new Payer(null, fuelPayerPerson, fuelCost, fuelMember);
+        Payer fuelPayer = new Payer("Kein Datum", fuelPayerPerson, fuelCost, fuelMember);
         Event fuel = new Event(fuelMember, fuelPayer);
         cityTravel.addEvent(fuel, "Kraftstoff");
 
-        gerd.addNewDebts(fuel, fuelPayer, gerd);
-        jens.addNewDebts(fuel, fuelPayer, jens);
-        kathrin.addNewDebts(fuel, fuelPayer, kathrin);
-        sina.addNewDebts(fuel, fuelPayer, sina);
-        christoph.addNewDebts(fuel, fuelPayer, christoph);
-        simon.addNewDebts(fuel, fuelPayer, simon);
-        thomas.addNewDebts(fuel, fuelPayer, thomas);
-        jessica.addNewDebts(fuel, fuelPayer, jessica);
+        gerd.addNewDebts(fuel, fuelPayer);
+        jens.addNewDebts(fuel, fuelPayer);
+        kathrin.addNewDebts(fuel, fuelPayer);
+        sina.addNewDebts(fuel, fuelPayer);
+        christoph.addNewDebts(fuel, fuelPayer);
+        simon.addNewDebts(fuel, fuelPayer);
+        thomas.addNewDebts(fuel, fuelPayer);
+        jessica.addNewDebts(fuel, fuelPayer);
 
 
         //Die Abrechnung für die Städtereise wird durchgeführt, damit ist das Projekt beendet.
@@ -231,21 +232,23 @@ public class Main {
 
         //Christoph bezahlt die Miete in Höhe von 1275,80 Euro.
         Project commune2 = new Project(communeMember);
+
+
         Event rent2 = new Event(communeMember, rentPayer);
         commune2.addEvent(rent2, "Miete");
 
-        thomas.addNewDebts(rent2, rentPayer, thomas);
-        markus.addNewDebts(rent2, rentPayer, markus);
-        christoph.addNewDebts(rent2, rentPayer, christoph);
+        thomas.addNewDebts(rent2, rentPayer);
+        markus.addNewDebts(rent2, rentPayer);
+        christoph.addNewDebts(rent2, rentPayer);
 
 
         //Markus zahlt 29,99 Euro für die Internet Flat.
         Event flat2 = new Event(communeMember, flatPayer);
         commune2.addEvent(flat2, "Internet-Flat");
 
-        thomas.addNewDebts(flat2, flatPayer, thomas);
-        markus.addNewDebts(flat2, flatPayer, markus);
-        christoph.addNewDebts(flat2, flatPayer, christoph);
+        thomas.addNewDebts(flat2, flatPayer);
+        markus.addNewDebts(flat2, flatPayer);
+        christoph.addNewDebts(flat2, flatPayer);
 
 
         //Die zweite Abrechnung für die WG wird durchgeführt.
