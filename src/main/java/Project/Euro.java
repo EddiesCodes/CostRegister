@@ -9,7 +9,7 @@ public class Euro {
 
     private double cost;
 
-    Euro(double cost) {
+    public Euro(double cost) {
         this.cost = cost;
     }
 

@@ -1,6 +1,6 @@
 package Project;
 
-
+import Person.ListPerson;
 import Person.Person;
 
 import java.util.ArrayList;
@@ -10,16 +10,20 @@ public class ListEuro {
 
     private ArrayList<Double> listEuro;
 
-    public ListEuro(){
+    public ListEuro() {
         this.listEuro = new ArrayList<>();
     }
 
-    public void add(Double cost){
+    public void add(Double cost) {
         listEuro.add(cost);
     }
 
-    public void putInPersonEuro(HashMap<Person, Euro> personEuro, Person payer, int index, int size){
-        Euro cost = new Euro(listEuro.get(index)/size);
-        personEuro.put(payer, cost);
+    public void putEuro(HashMap<Person, Euro> personEuro, ListPerson member, Person person) {
+       replaceCost(personEuro, member, person, listEuro.get(0));
+    }
+
+    public void replaceCost(HashMap<Person, Euro> personEuro, ListPerson member, Person person, Double cost){
+        member.replaceCost(personEuro, cost, person);
+        listEuro.remove(0);
     }
 }

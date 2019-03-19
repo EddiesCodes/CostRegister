@@ -20,14 +20,9 @@ public class ListPerson {
     }
 
     void putInPersonEuro(HashMap<Person, Euro> personEuro, ListEuro cost, ListPerson member){
-        int size = 0;
-        for (Person person : member.listPerson) {
-            size++;
-        }
-        int index = 0;
-        for (Person payer: listPerson) {
-            cost.putInPersonEuro(personEuro, payer, index, size);
-            index++;
+        for (Person person: listPerson) {
+            personEuro.put(person, new Euro(0.0));
+            cost.putEuro(personEuro, member, person);
         }
     }
 
@@ -38,5 +33,10 @@ public class ListPerson {
         System.out.println();
         System.out.println("Abrechnung beendet!!!");
         System.out.println();
+    }
+
+    public void replaceCost(HashMap<Person, Euro> personEuro, Double euro, Person person){
+        Euro cost = new Euro(euro/listPerson.size());
+        personEuro.replace(person, cost);
     }
 }
