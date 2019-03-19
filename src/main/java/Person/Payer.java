@@ -16,6 +16,11 @@ public class Payer {
         this.personEuro = new MapPersonEuro(payer, cost, member);
     }
 
+    public Payer(ListPerson payer, ListEuro cost, ListPerson member) {
+        this.date = null;
+        this.personEuro = new MapPersonEuro(payer, cost, member);
+    }
+
     void put(HashMap<Person, MapEventEuro> personEventEuro, Event event, Person person){
         personEuro.put(personEventEuro, event, person);
     }
@@ -23,6 +28,4 @@ public class Payer {
     void putDebts(HashMap<Person, MapEventEuro> personEventEuro, Event event, Person person){
         personEuro.putDebts(personEventEuro, event, person);
     }
-
-
 }

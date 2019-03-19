@@ -50,7 +50,7 @@ public class Main {
         rentCost.add(1275.80);
 
 
-        Payer rentPayer = new Payer("Kein Datum", rentPayerPerson, rentCost, communeMember);
+        Payer rentPayer = new Payer(rentPayerPerson, rentCost, communeMember);
         Event rent = new Event(communeMember, rentPayer);
         commune.addEvent(rent, "Miete");
 
@@ -66,7 +66,7 @@ public class Main {
         ListEuro flatCost = new ListEuro();
         flatCost.add(29.99);
 
-        Payer flatPayer = new Payer("Kein Datum", flatPayerPerson, flatCost, communeMember);
+        Payer flatPayer = new Payer(flatPayerPerson, flatCost, communeMember);
         Event flat = new Event(communeMember, flatPayer);
         commune.addEvent(flat, "Internet-Flat");
 
@@ -86,7 +86,7 @@ public class Main {
         ListEuro beerCost = new ListEuro();
         beerCost.add(63.80);
 
-        Payer beerPayer = new Payer("Kein Datum", beerPayerPerson, beerCost, beerMember);
+        Payer beerPayer = new Payer(beerPayerPerson, beerCost, beerMember);
         Event beer = new Event(beerMember, beerPayer);
         commune.addEvent(beer, "Bier");
 
@@ -101,7 +101,7 @@ public class Main {
         ListEuro fridgeCost = new ListEuro();
         fridgeCost.add(104.88);
 
-        Payer fridgePayer = new Payer("Kein Datum", fridgePayerPerson, fridgeCost, communeMember);
+        Payer fridgePayer = new Payer(fridgePayerPerson, fridgeCost, communeMember);
         Event fridge = new Event(communeMember, fridgePayer);
         commune.addEvent(fridge, "Kühlschrank");
 
@@ -148,7 +148,7 @@ public class Main {
         musicalCost.add(500.00);
         musicalCost.add(864.50 - 500.00);
 
-        Payer musicalPayer = new Payer("Kein Datum", musicalPayerPerson, musicalCost, musicalMember);
+        Payer musicalPayer = new Payer(musicalPayerPerson, musicalCost, musicalMember);
         Event musical = new Event(musicalMember, musicalPayer);
         cityTravel.addEvent(musical, "Musical");
 
@@ -175,7 +175,7 @@ public class Main {
         ListEuro beerEveningCost = new ListEuro();
         beerEveningCost.add(66.00);
 
-        Payer beerEveningPayer = new Payer("Kein Datum", beerEveningPayerPerson, beerCost, beerMember);
+        Payer beerEveningPayer = new Payer(beerEveningPayerPerson, beerCost, beerMember);
         Event beerEvening = new Event(beerEveningMember, beerEveningPayer);
         cityTravel.addEvent(beerEvening, "Bier am Abend");
 
@@ -208,7 +208,7 @@ public class Main {
         fuelCost.add(61.38);
         fuelCost.add(54.43);
 
-        Payer fuelPayer = new Payer("Kein Datum", fuelPayerPerson, fuelCost, fuelMember);
+        Payer fuelPayer = new Payer(fuelPayerPerson, fuelCost, fuelMember);
         Event fuel = new Event(fuelMember, fuelPayer);
         cityTravel.addEvent(fuel, "Kraftstoff");
 
@@ -253,6 +253,5 @@ public class Main {
 
         //Die zweite Abrechnung für die WG wird durchgeführt.
         commune2.transaction();
-
     }
 }
