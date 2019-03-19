@@ -175,17 +175,17 @@ public class Main {
         ListEuro beerEveningCost = new ListEuro();
         beerEveningCost.add(66.00);
 
-        Payer beerEveningPayer = new Payer(beerEveningPayerPerson, beerCost, beerMember);
+        Payer beerEveningPayer = new Payer(beerEveningPayerPerson, beerEveningCost, beerEveningMember);
         Event beerEvening = new Event(beerEveningMember, beerEveningPayer);
         cityTravel.addEvent(beerEvening, "Bier am Abend");
 
-        sina.addNewDebts(beerEvening, beerPayer);
-        jens.addNewDebts(beerEvening, beerPayer);
-        jessica.addNewDebts(beerEvening, beerPayer);
-        christoph.addNewDebts(beerEvening, beerPayer);
-        thomas.addNewDebts(beerEvening, beerPayer);
-        gerd.addNewDebts(beerEvening, beerPayer);
-        kathrin.addNewDebts(beerEvening, beerPayer);
+        sina.addNewDebts(beerEvening, beerEveningPayer);
+        jens.addNewDebts(beerEvening, beerEveningPayer);
+        jessica.addNewDebts(beerEvening, beerEveningPayer);
+        christoph.addNewDebts(beerEvening, beerEveningPayer);
+        thomas.addNewDebts(beerEvening, beerEveningPayer);
+        gerd.addNewDebts(beerEvening, beerEveningPayer);
+        kathrin.addNewDebts(beerEvening, beerEveningPayer);
 
 
         //Gerd hat für Benzin 61,38 Euro ausgegeben, bei ihm sind Jens, Kathrin, Sina und Christoph mitgefahren.
