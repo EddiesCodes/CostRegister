@@ -22,7 +22,7 @@ public class ListEuro {
        replaceCost(personEuro, member, person, listEuro.get(0));
     }
 
-    public void replaceCost(HashMap<Person, Euro> personEuro, ListPerson member, Person person, Double cost){
+    private void replaceCost(HashMap<Person, Euro> personEuro, ListPerson member, Person person, Double cost){
         member.replaceCost(personEuro, cost, person);
         listEuro.remove(0);
     }
