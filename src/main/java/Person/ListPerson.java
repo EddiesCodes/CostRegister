@@ -19,7 +19,7 @@ public class ListPerson {
         listPerson.add(person);
     }
 
-    public void putInPersonEuro(HashMap<Person, Euro> personEuro, ListEuro cost, ListPerson member){
+    void putInPersonEuro(HashMap<Person, Euro> personEuro, ListEuro cost, ListPerson member){
         int size = 0;
         for (Person person : member.listPerson) {
             size++;

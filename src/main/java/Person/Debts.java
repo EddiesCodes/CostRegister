@@ -5,27 +5,27 @@ import Project.Event;
 import Project.MapEventName;
 import java.util.Set;
 
-public class Debts {
+class Debts {
 
     private MapPersonEventEuro personEventEuro;
 
-    public Debts(){
+    Debts(){
         this.personEventEuro = new MapPersonEventEuro();
     }
 
-    public void checkEmpty(Event event, Payer payer, Person person){
+    void checkEmpty(Event event, Payer payer, Person person){
         personEventEuro.checkEmpty(event, payer, person);
     }
 
-    public void addDebts(Event event, Payer payer, Person person){
+    void addDebts(Event event, Payer payer, Person person){
         personEventEuro.addDebts(event, payer, person);
     }
 
-    public void printDebts(Person person, MapEventName affectedEvents){
+    void printDebts(Person person, MapEventName affectedEvents){
         personEventEuro.print(person, affectedEvents);
     }
 
-    public void calculateOtherCost(Euro otherCost, Person person, Set<Event> events){
+    void calculateOtherCost(Euro otherCost, Person person, Set<Event> events){
         personEventEuro.calculateOtherCost(otherCost, person, events);
     }
 }

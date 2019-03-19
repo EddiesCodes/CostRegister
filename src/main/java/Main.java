@@ -57,7 +57,7 @@ public class Main {
         markus.addNewDebts(rent, rentPayer, markus);
         christoph.addNewDebts(rent, rentPayer, christoph);
 
-        
+
         //Markus zahlt 29,99 Euro für die Internet Flat
         ListPerson flatPayerPerson = new ListPerson();
         flatPayerPerson.add(markus);

@@ -1,10 +1,10 @@
 package Person;
 
-public class Date {
+class Date {
 
     private String date;
 
-    public Date(String date){
+    Date(String date){
         this.date = date;
     }
 }

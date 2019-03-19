@@ -1,6 +1,5 @@
 package Person;
 
-import Project.Euro;
 import Project.Event;
 import Project.ListEuro;
 import Project.MapEventEuro;
@@ -17,11 +16,11 @@ public class Payer {
         this.personEuro = new MapPersonEuro(payer, cost, member);
     }
 
-    public void put(HashMap<Person, MapEventEuro> personEventEuro, Event event, Person person){
+    void put(HashMap<Person, MapEventEuro> personEventEuro, Event event, Person person){
         personEuro.put(personEventEuro, event, person);
     }
 
-    public void putDebts(HashMap<Person, MapEventEuro> personEventEuro, Event event, Person person){
+    void putDebts(HashMap<Person, MapEventEuro> personEventEuro, Event event, Person person){
         personEuro.putDebts(personEventEuro, event, person);
     }
 

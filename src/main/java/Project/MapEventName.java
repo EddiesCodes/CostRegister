@@ -8,11 +8,11 @@ public class MapEventName {
 
     private HashMap<Event, EventName> eventName;
 
-    public MapEventName(){
+    MapEventName(){
         this.eventName = new HashMap<>();
     }
 
-    public void put(Event event, String nameEvent){
+    void put(Event event, String nameEvent){
         eventName.put(event, new EventName(nameEvent));
     }
 
@@ -23,7 +23,7 @@ public class MapEventName {
     }
 
 
-    public void checkEvent(Person person, MapEventEuro eventEuro, Person payer) {
+    private void checkEvent(Person person, MapEventEuro eventEuro, Person payer) {
         eventEuro.checkEvent(person, eventName, payer);
     }
 }

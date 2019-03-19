@@ -3,7 +3,6 @@ package Person;
 import Project.Euro;
 import Project.Event;
 import Project.MapEventName;
-
 import java.util.Set;
 
 public class Person {
@@ -25,7 +24,7 @@ public class Person {
         name.print();
     }
 
-    public void printDebts(Person person, MapEventName affectedEvents){
+    void printDebts(Person person, MapEventName affectedEvents){
         debts.printDebts(person, affectedEvents);
     }
 

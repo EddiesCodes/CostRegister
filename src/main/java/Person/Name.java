@@ -1,6 +1,6 @@
 package Person;
 
-public class Name {
+class Name {
 
     private String name;
 
@@ -8,7 +8,7 @@ public class Name {
         this.name = name;
     }
 
-    public void print(){
+    void print(){
         System.out.print(name);
     }
 }

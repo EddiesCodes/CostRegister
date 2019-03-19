@@ -9,11 +9,11 @@ public class Euro {
 
     private double cost;
 
-    public Euro(double cost) {
+    Euro(double cost) {
         this.cost = cost;
     }
 
-    public void print(double costs, Person person, Person payer) {
+    private void print(double costs, Person person, Person payer) {
         if (cost - costs > 0) {
             person.printName();
             System.out.print(" schuldet ");
@@ -22,7 +22,7 @@ public class Euro {
         }
     }
 
-    public void calculate(HashMap<Event, Euro> eventEuro, Set<Event> events, Euro otherCost, Person person, Person payer) {
+    void calculate(HashMap<Event, Euro> eventEuro, Set<Event> events, Euro otherCost, Person person, Person payer) {
         for (Event event : eventEuro.keySet()) {
             eventContain(eventEuro.get(event), events, event);
         }
@@ -35,7 +35,7 @@ public class Euro {
         }
     }
 
-    public void calculateOtherCost(HashMap<Event, Euro> eventEuro, Set<Event> events) {
+    void calculateOtherCost(HashMap<Event, Euro> eventEuro, Set<Event> events) {
         for (Event event : eventEuro.keySet()) {
             eventContain(eventEuro.get(event), events, event);
         }
